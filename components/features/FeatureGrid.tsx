@@ -26,12 +26,15 @@ export default function FeatureGrid() {
   const badgeRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.to(badgeRef.current, {
-      y: -14,
-      duration: 2.6,
-      ease: "sine.inOut",
-      repeat: -1,
-      yoyo: true,
+    const mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.to(badgeRef.current, {
+        y: -14,
+        duration: 2.6,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
     });
   });
 
@@ -51,7 +54,11 @@ export default function FeatureGrid() {
           </div>
         ))}
         <div className="fc-center" ref={badgeRef}>
-          <Image src={badge} alt="RK Cold Pressed — 100% pure, no preservatives" />
+          <Image
+            src={badge}
+            alt="RK Cold Pressed — 100% pure, no preservatives"
+            sizes="(max-width: 760px) 150px, 220px"
+          />
         </div>
         {RIGHT.map((f, i) => (
           <div className={`feature-card fc-r${i + 1}`} key={f.label}>

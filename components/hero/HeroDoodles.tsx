@@ -17,22 +17,28 @@ export default function HeroDoodles() {
   const orangeRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.to(appleRef.current, {
-      y: -16,
-      rotate: -8,
-      duration: 3.2,
-      ease: "sine.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.to(orangeRef.current, {
-      y: 14,
-      rotate: 6,
-      duration: 3.6,
-      ease: "sine.inOut",
-      repeat: -1,
-      yoyo: true,
-      delay: 0.4,
+    // Matches the CSS breakpoint that hides .hero-doodles on mobile, so
+    // these loops never run (and auto-revert) on a screen where the
+    // element isn't even rendered. Also skips for prefers-reduced-motion.
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 961px) and (prefers-reduced-motion: no-preference)", () => {
+      gsap.to(appleRef.current, {
+        y: -16,
+        rotate: -8,
+        duration: 3.2,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
+      gsap.to(orangeRef.current, {
+        y: 14,
+        rotate: 6,
+        duration: 3.6,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: 0.4,
+      });
     });
   });
 

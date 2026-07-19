@@ -17,7 +17,14 @@ export default function RealPhotos() {
       <div className="gallery-grid">
         {PHOTOS.map((p) => (
           <figure key={p.alt} className="gallery-card">
-            <Image src={p.src} alt={p.alt} placeholder="blur" />
+            <Image
+              src={p.src}
+              alt={p.alt}
+              fill
+              sizes="(max-width: 640px) 50vw, 320px"
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+            />
             <figcaption>{p.caption}</figcaption>
           </figure>
         ))}

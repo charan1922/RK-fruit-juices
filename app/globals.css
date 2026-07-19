@@ -132,6 +132,11 @@ body {
   .brand span {
     display: none;
   }
+  /* Decorative gloss sweep is desktop-only in JS (see useProductExperience);
+     hide it outright here so it doesn't sit as a static diagonal streak. */
+  .bottle-float .shimmer {
+    display: none;
+  }
 }
 
 /* ---------- Hero ---------- */
