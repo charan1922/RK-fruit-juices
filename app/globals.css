@@ -132,11 +132,6 @@ body {
   .brand span {
     display: none;
   }
-  /* Decorative gloss sweep is desktop-only in JS (see useProductExperience);
-     hide it outright here so it doesn't sit as a static diagonal streak. */
-  .bottle-float .shimmer {
-    display: none;
-  }
 }
 
 /* ---------- Hero ---------- */
@@ -388,6 +383,15 @@ body {
   transform: skewX(-18deg);
   pointer-events: none;
   z-index: 3;
+}
+
+/* Decorative gloss sweep is desktop-only in JS (see useProductExperience);
+   hide it outright here so it doesn't sit as a static diagonal streak.
+   Must come after the base rule above — equal specificity, source order wins. */
+@media (max-width: 720px) {
+  .bottle-float .shimmer {
+    display: none;
+  }
 }
 
 .flavor-tag {
