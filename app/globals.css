@@ -132,11 +132,11 @@ body {
     font-size: 13px;
     white-space: nowrap;
   }
-  .brand-sub {
-    display: none;
-  }
   .brand-mark {
     font-size: 22px;
+  }
+  .brand-sub {
+    font-size: 14px;
   }
 }
 
