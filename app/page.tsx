@@ -9,7 +9,6 @@ import FeatureGrid from "@/components/features/FeatureGrid";
 import PricingSection from "@/components/pricing/PricingSection";
 import RealPhotos from "@/components/gallery/RealPhotos";
 import MenuList from "@/components/menu/MenuList";
-import CommercialReel from "@/components/showcase/CommercialReel";
 import { useProductExperience } from "@/hooks/useProductExperience";
 
 export default function Home() {
@@ -26,7 +25,6 @@ export default function Home() {
       </main>
       <ProductSelector active={active} onSelect={selectProduct} />
       <FeatureGrid />
-      <CommercialReel />
       <MenuList />
       <RealPhotos />
       <PricingSection />
