@@ -2,7 +2,10 @@ import sharp from "sharp";
 
 const SRC = "d:/Learnings/juice/public/images/brand/IMG_8152.jpeg";
 const OUT = "d:/Learnings/juice/public/images/brand/rk-mark.png";
-const CROP = { left: 328, top: 118, width: 598, height: 330 };
+// Excludes the tiny ornamental leaf-sprig above the letters on purpose: at
+// nav-bar scale (~34px) that fine detail turns to mush, while the bold R/K
+// (with the large leaf built into the K itself) stays crisp and legible.
+const CROP = { left: 350, top: 205, width: 568, height: 243 };
 const BG = [252, 244, 220]; // sampled cream background
 
 function keyOutColor(data, info, target, tightRadius = 26, softRadius = 60) {
