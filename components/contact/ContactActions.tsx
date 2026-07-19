@@ -1,5 +1,6 @@
 const PRIMARY_PHONE = "7674076898";
 const SECONDARY_PHONE = "7674076898";
+const WHATSAPP_MESSAGE = "Hi RK Cold Pressed! I'd like to place an order.";
 
 export default function ContactActions() {
   return (
@@ -10,7 +11,7 @@ export default function ContactActions() {
       </a>
       <a
         className="btn-whatsapp"
-        href={`https://wa.me/91${PRIMARY_PHONE}`}
+        href={`https://wa.me/91${PRIMARY_PHONE}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
         target="_blank"
         rel="noopener noreferrer"
       >
