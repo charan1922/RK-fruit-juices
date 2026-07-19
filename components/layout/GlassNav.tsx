@@ -1,12 +1,9 @@
-import Image from "next/image";
-import logo from "@/public/images/brand/rk-mark.png";
-
 export default function GlassNav() {
   return (
     <nav className="nav">
       <div className="brand">
-        <Image src={logo} alt="RK Cold Pressed Juices" className="brand-logo" priority />
-        <span>Cold&nbsp;Pressed</span>
+        <span className="brand-mark">RK</span>
+        <span className="brand-sub">Cold&nbsp;Pressed</span>
       </div>
       <div className="nav-links">
         <a href="#flavors">Products</a>

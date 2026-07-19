@@ -75,12 +75,15 @@ body {
   font-size: 16px;
 }
 
-.brand-logo {
-  height: 34px;
-  width: auto;
+.brand-mark {
+  font-family: var(--font-brand), Georgia, serif;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--brand-magenta);
 }
 
-.brand span {
+.brand-sub {
   color: var(--ink-soft);
 }
 
@@ -129,8 +132,11 @@ body {
     font-size: 13px;
     white-space: nowrap;
   }
-  .brand span {
+  .brand-sub {
     display: none;
+  }
+  .brand-mark {
+    font-size: 22px;
   }
 }
 
