@@ -12,7 +12,11 @@ export default function RealPhotos() {
     <section className="gallery" id="story" aria-label="Real photos from our kitchen">
       <div className="gallery-head">
         <h2>Made fresh. Every single day.</h2>
-        <p>No stock photos — this is what leaves our kitchen each morning.</p>
+        <p>
+          Long before the city wakes up, we&apos;re washing, cutting, and
+          pressing each fruit by hand. No stock photos, no shortcuts — just
+          what actually leaves our kitchen every morning.
+        </p>
       </div>
       <div className="gallery-grid">
         {PHOTOS.map((p) => (

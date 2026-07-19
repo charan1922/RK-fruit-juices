@@ -1,13 +1,14 @@
 import { MONTHLY_PLANS, MIXED_PLAN } from "@/data/plans";
 import ContactActions from "@/components/contact/ContactActions";
 import ContactForm from "@/components/contact/ContactForm";
+import LocationMap from "@/components/contact/LocationMap";
 
 export default function PricingSection() {
   return (
     <section className="pricing" id="subscribe">
       <div className="pricing-head">
         <h2>Monthly Subscription</h2>
-        <p>Delivery by 9:00 AM · Monday–Saturday · Bulk orders welcome</p>
+        <p>Delivery by 9:00 AM · Monday–Saturday · Bulk &amp; corporate orders welcome</p>
       </div>
 
       <div className="pricing-grid">
@@ -34,6 +35,7 @@ export default function PricingSection() {
       </div>
 
       <ContactActions />
+      <LocationMap />
 
       <div className="contact-form-wrap">
         <ContactForm />

@@ -1,5 +1,5 @@
 const PRIMARY_PHONE = "7674076898";
-const SECONDARY_PHONE = "7989619348";
+const SECONDARY_PHONE = "7674076898";
 
 export default function ContactActions() {
   return (

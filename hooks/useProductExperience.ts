@@ -82,11 +82,6 @@ export function useProductExperience() {
                 ease: "power4.out",
               },
               0.4
-            )
-            .from(
-              ".thumb",
-              { y: reduceMotion ? 0 : 40, opacity: 0, duration: reduceMotion ? 0.2 : 0.7, stagger: reduceMotion ? 0 : 0.08 },
-              0.7
             );
 
           // Continuous vertical floating idle animation — smaller amplitude

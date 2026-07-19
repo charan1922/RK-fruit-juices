@@ -17,7 +17,7 @@ const LEFT = [
 
 const RIGHT = [
   { icon: "⏰", label: "9 AM Delivery" },
-  { icon: "📦", label: "Bulk Orders" },
+  { icon: "📦", label: "Bulk & Corporate Orders" },
   { icon: "🏷️", label: "Fair Pricing" },
   { icon: "❤️", label: "Made With Love" },
 ];

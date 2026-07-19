@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import appleBottle from "@/public/images/products/apple-juice/bottle.png";
 import orangeBottle from "@/public/images/products/orange-juice/bottle.png";
+import abcBottle from "@/public/images/products/abc-juice/bottle.png";
 
 gsap.registerPlugin(useGSAP);
 
@@ -15,6 +16,7 @@ gsap.registerPlugin(useGSAP);
 export default function HeroDoodles() {
   const appleRef = useRef<HTMLDivElement>(null);
   const orangeRef = useRef<HTMLDivElement>(null);
+  const abcRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     // Matches the CSS breakpoint that hides .hero-doodles on mobile, so
@@ -39,6 +41,15 @@ export default function HeroDoodles() {
         yoyo: true,
         delay: 0.4,
       });
+      gsap.to(abcRef.current, {
+        y: -12,
+        rotate: 7,
+        duration: 3.4,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: 0.2,
+      });
     });
   });
 
@@ -61,6 +72,9 @@ export default function HeroDoodles() {
       </div>
       <div className="doodle-img doodle-orange" ref={orangeRef}>
         <Image src={orangeBottle} alt="" />
+      </div>
+      <div className="doodle-img doodle-abc" ref={abcRef}>
+        <Image src={abcBottle} alt="" />
       </div>
     </div>
   );
